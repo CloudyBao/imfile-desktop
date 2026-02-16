@@ -63,14 +63,12 @@
         {
           "target": "dmg",
           "arch": [
-            "x64",
             "arm64"
           ]
         },
         {
           "target": "zip",
           "arch": [
-            "x64",
             "arm64"
           ]
         }
@@ -79,6 +77,7 @@
       "darkModeSupport": true,
       "hardenedRuntime": false,
       "notarize": false,
+      "sign": false,
       "extraResources": {
         "from": "./extra/darwin/${arch}/",
         "to": "./",

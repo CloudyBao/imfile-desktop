@@ -48,6 +48,20 @@ function startRenderer () {
       static: {
         directory: path.resolve(__dirname, "../"),
       },
+      // Fix EMFILE: too many open files
+      watchFiles: {
+        paths: ['src/**/*'],
+        options: {
+          ignored: /node_modules/,
+          usePolling: false,
+        },
+      },
+      client: {
+        overlay: {
+          errors: true,
+          warnings: false,
+        },
+      },
     };
 
     const server = new WebpackDevServer(devServerOptions, compiler)
