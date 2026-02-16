@@ -1,9 +1,11 @@
+import { ElMessage } from 'element-plus'
+
 const queue = []
 const maxLength = 5
 
 export default {
-  install: function (Vue, Message, defaultOption = {}) {
-    Vue.prototype.$msg = new Proxy(Message, {
+  install: function (app, defaultOption = {}) {
+    app.config.globalProperties.$msg = new Proxy(ElMessage, {
       get (obj, prop) {
         return (arg) => {
           if (!(arg instanceof Object)) {

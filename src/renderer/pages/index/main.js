@@ -57,7 +57,7 @@ function init(config) {
   app.use(router)
   app.use(i18n)
   app.use(ElementPlus, { size: 'mini' })
-  app.use(Msg, { showClose: true })
+  app.use(Msg)
   app.component('mo-icon', Icon)
 
   app.mount('#app')
