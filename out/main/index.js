@@ -19860,8 +19860,8 @@ const getEngineArch = (platform2, arch2) => {
 };
 const getDevEnginePath = (platform2, arch2) => {
   const ah = getEngineArch(platform2, arch2);
-  const base = `../../../extra/${platform2}/${ah}/engine`;
-  const result = path.resolve(__dirname, base);
+  const base = `extra/${platform2}/${ah}/engine`;
+  const result = path.resolve(require$$3$1.app.getAppPath(), base);
   return result;
 };
 const getProdEnginePath = () => {
@@ -62599,7 +62599,7 @@ const pageConfig = {
     },
     bindCloseToHide: true,
     openDevTools: is.dev(),
-    url: is.dev() ? "http://localhost:9080" : require("path").join("file://", __dirname, "/index.html")
+    url: is.dev() ? "http://localhost:5173" : require("path").join("file://", __dirname, "/index.html")
   }
 };
 const baseBrowserOptions = {
