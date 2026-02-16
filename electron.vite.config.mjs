@@ -37,7 +37,8 @@ export default defineConfig({
       alias: {
         '@': resolve('src/renderer'),
         '@shared': resolve('src/shared')
-      }
+      },
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
     },
     plugins: [
       vue(),
