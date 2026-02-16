@@ -30,7 +30,8 @@ export default defineConfig({
       rollupOptions: {
         input: {
           index: resolve('src/renderer/index.html')
-        }
+        },
+        external: ['node:events', 'node:fs', 'node:path', 'node:stream', 'node:http', 'node:https', 'node:zlib', 'node:url', 'ws', 'node-fetch']
       }
     },
     resolve: {
